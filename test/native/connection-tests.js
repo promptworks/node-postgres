@@ -22,6 +22,11 @@ test('connects', function() {
   })
 })
 
+test('connects via ssl', function() {
+  var con = new Client(helper.config, {ssl: true});
+  assert.equal(true, con.ssl);
+})
+
 test('preserves domain', function() {
   var dom = domain.create();
 
